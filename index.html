@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    
+    <link rel="icon" type="image/x-icon" href="./img/icon/pokeball.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pokédex.app</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/chart.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/html.js"></script>
+    
+  </head>
+
+  <body onload="includeHTML() ;init()">
+    <div w3-include-html="./template/header.html"></div>
+
+    <div class="customerscreen">
+      <main class="d_fl_c_c mw1920 d_flexdir_c">
+        <h1>Pokédex</h1>
+        <div class="container cardpos" id="card"></div>
+        <div class="btn"><button onclick="loadMore()">load more</button></div>
+      </main>
+    </div>
+
+    <div class="view-card-bg d-none" id="dark-bg" onclick="closeCard()">
+      <div id="pokemoncard"></div>
+    </div>
+
+    <div w3-include-html="./template/footer.html"></div>
+  </body>
+</html>
